@@ -9,21 +9,25 @@
                 max-width: 100%;
                 height: auto;
                 display: block;
-                margin: 0 auto;
+                margin: 0 auto 10px auto;
             }
 
             #search {
                 width: 90%;
                 height: 100%;
                 padding: 5px 5px;
-                font-size: 2em;
+                font-size: 1.5em;
                 border-style: none;
                 outline: none;
                 box-sizing: border-box;
             
             }
             #search-icon{
-                float: left;
+                position: relative;
+                left: 10px;
+                top: 5px;
+
+                
 
             }
 
@@ -33,23 +37,78 @@
                 margin: 0 auto;
                 border: 1px solid grey;
                 border-radius: 20px;
+                background-color: white;
                 
             
                 
         
 
             }
-        
+            .nav {
+                list-style-type: none;
+            }
+            
+            .left{
+                float: left;
+                display: inline;
+                padding: 8px;
+                font-size: 1em;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .right{
+                float: right;
+                display: inline;
+                padding: 8px;
+                font-size: 1em;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            #signin{
+                background-color: #4285f4;
+                color: white;
+                border-radius: 3px;
+                padding: 10px;
+            }
             
             .empty{
                 background-color: white;
                 height: 300px;
             }
+
+        footer{
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            background-color: #F8F9FA;
+            width: 100%;
+        }
+
+        .lucky{
+            margin: 0px auto;
+            width: 20%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        p{
+            font-size: 1.3em;
+            width: 40%;
+            box-sizing: border-box;
+            display: inline;
+            background-color: #F8F9FA;
+            border-radius: 7px;
+        }
         </style>
 
         <title>Google.com</title>
     </head>
     <body>
+        <nav>
+            <ul class="nav"><li class="left">About</li> <li class="left">Store</li></ul>
+            <ul class="nav"><li class="right" id="signin">Sign in</li><li class="right"><img src="search-icon.png"></li><li class="right">Images</li><li class="right">Gmail</li></ul>
+        </nav>
         <div class="empty"></div>
         <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
         <form>
@@ -58,5 +117,23 @@
                 <input type="text" id="search" name="search">
             </div>
         </form>
+        <div class="lucky">
+            <p class="left">Google Search</p>
+            <p class="right">I'm feeling lucky</p>
+        </div>
+        <footer>
+        <ul class="nav">
+            <li class="left">About</li>
+            <li class="left">Advertising</li>
+            <li class="left">Business</li>
+            <li class="left">How search works</li>
+        </ul>
+        <ul class="nav">
+            <li class="right">Settings</li>
+            <li class="right">Privacy</li>
+            <li class="right">Terms</li>
+        </ul>
+        </footer>
+        </footer>
     </body>
 </html>
